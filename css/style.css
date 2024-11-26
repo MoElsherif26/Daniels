@@ -1,0 +1,747 @@
+/*********** global style ************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+:root {
+    --logo-color: #1c1c1c;
+    --nav-color: #111111;
+    --main-color: #ffffff;
+    --head-color: #343434;
+    --subhead-color: #999999;
+    --section-color: #748182;
+    --navtabs-color: #222222;
+    --carousal-color: #888888;
+    --head-font: 'Montserrat';
+    --sub-font: 'Poppins';
+}
+
+.logo-color {
+    color: var(--logo-color);
+}
+
+.nav-color {
+    color: var(--nav-color);
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.head-color {
+    color: var(--head-color);
+}
+
+.subhead-color {
+    color: var(--subhead-color);
+}
+
+.section-color {
+    color: var(--section-color);
+}
+
+.navtabs-color {
+    color: var(--navtabs-color);
+}
+
+.carousal-color {
+    color: var(--carousal-color);
+}
+
+.head-font {
+    font-family: var(--head-font);
+}
+
+.sub-font {
+    font-family: var(--sub-font);
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
+.fs-50 {
+    font-size: 50px;
+}
+
+.fs-60 {
+    font-size: 60px;
+}
+
+.lh-13 {
+    line-height: 13px;
+}
+
+.lh-14 {
+    line-height: 14px;
+}
+
+.lh-17 {
+    line-height: 17px;
+}
+
+.lh-18 {
+    line-height: 18px;
+}
+
+.lh-19 {
+    line-height: 19px;
+}
+
+.lh-20 {
+    line-height: 20px;
+}
+
+.lh-21 {
+    line-height: 21px;
+}
+
+.lh-22 {
+    line-height: 22px;
+}
+
+.lh-23 {
+    line-height: 23px;
+}
+
+.lh-24 {
+    line-height: 24px;
+}
+
+.lh-26 {
+    line-height: 26px;
+}
+
+.lh-28 {
+    line-height: 28px;
+}
+
+.lh-30 {
+    line-height: 30px;
+}
+
+.lh-33 {
+    line-height: 33px;
+}
+
+.lh-44 {
+    line-height: 44px;
+}
+
+.lh-55 {
+    line-height: 55px;
+}
+
+.lh-60 {
+    line-height: 60px;
+}
+
+.lh-72 {
+    line-height: 72px;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+/*********** navbar style ************/
+#web-nav-bar {
+    transition: 0.4s;
+}
+
+.my-nav-tab {
+    margin: 0 20px;
+
+}
+
+.my-absloute {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.my-absloute a {
+    color: white;
+}
+
+.my-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999999;
+    background-color: #fff;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+.my-fixed a {
+    color: var(--nav-color);
+}
+
+.my-nav-link {
+    position: relative;
+}
+
+.my-fixed .my-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.my-fixed .my-nav-link.my-active-link::after {
+    width: 100%;
+}
+
+.my-absloute .my-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.my-absloute .my-nav-link.my-active-link::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* .navbar-toggler:focus + .navbar-collapse {
+    text-align: center;
+    background-color: white;
+} */
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.menu-icon-black {
+    color: black;
+}
+
+.menu-icon-white {
+    color: white;
+}
+
+/*************** home style *****************/
+#home {
+    background-position: center;
+    background-size: cover;
+}
+
+.home-social-icons a {
+    background-color: #080F12;
+    height: 35px;
+    width: 35px;
+}
+
+/************** about style *************/
+.about-img {
+    padding: 0 0 30px 30px;
+}
+
+.about-img::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 20%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.progress-bar {
+    background-color: var(--logo-color);
+}
+
+.progress {
+    height: 30px;
+    color: var(--main-color);
+}
+
+.about-btns .download-btn {
+    color: white;
+    background-color: var(--logo-color);
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    transition: 0.4s;
+}
+
+.about-btns .download-btn:hover {
+    color: var(--head-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--head-color);
+}
+
+.about-btns .contact-btn {
+    background-color: var(--main-color);
+    color: var(--head-color);
+    padding: 10px 15px;
+    border: 1px solid var(--head-color);
+    transition: 0.4s;
+}
+
+.about-btns .contact-btn:hover {
+    background-color: var(--logo-color);
+    color: var(--main-color);
+}
+
+/*********** services style ***************/
+#services {
+    background-color: #F7F7F7;
+}
+
+.services-head {
+    width: fit-content;
+    margin: auto;
+    z-index: 1;
+}
+
+.services-head::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+.service-box {
+    background-color: white;
+    padding: 3rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 3rem;
+}
+
+.ico-circle {
+    padding: 2rem;
+
+}
+
+.service-box:hover .ico-circle {
+    color: var(--main-color);
+    background-color: var(--logo-color);
+}
+
+.service-box .service-ico {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-box .ico-circle {
+    transition: all 500ms ease;
+    display: flex;
+    background-color: #f4f4f4;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.service-box .ico-circle i {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+/******************* works style ***********************/
+.works-head {
+    width: fit-content;
+    margin: auto;
+    z-index: 1;
+}
+
+.works-head::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.work-item {
+    position: relative;
+}
+
+.work-item:hover .work-cap {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.work-cap {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(10px);
+    width: calc(100%-5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100%-5px);
+}
+
+.work-icons {
+    display: flex;
+}
+
+.work-icons a {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 3px;
+    border: 1px solid transparent;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    width: 32px;
+    height: 32px;
+    background-color: var(--logo-color);
+    transition: 0.3s;
+}
+
+.work-icons a:hover {
+    border: 1px solid var(--logo-color);
+    color: #000000;
+    background-color: var(--main-color);
+}
+
+
+#works .nav-pills .nav-link.active, #works .nav-link, .nav-pills .show>.nav-link {
+    color: var(--navtabs-color);
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 700;
+    font-family: var(--sub-font);
+    background-color: transparent;
+    padding: 0;
+    margin: 10px;
+    position: relative;
+}
+
+#works .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    top: 110%;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+#works .nav-link.active::after {
+    width: 100%;
+}
+
+/************** testmonials style ********************/
+#clients {
+    background-color: #F7F7F7;
+}
+
+.clients-head {
+    width: fit-content;
+    margin: auto;
+    z-index: 1;
+}
+
+.clients-head::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    transition: opacity 0.2s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #869791;
+}
+
+.carousel-indicators button:hover {
+    opacity: 1;
+    background-color: #869791;
+}
+
+
+/************* team style **************/
+.team-head {
+    width: fit-content;
+    margin: auto;
+    z-index: 1;
+}
+
+.team-head::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.team-member {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member .member-img {
+    transition: all 0.4s ease 0s;
+}
+
+.team-member .social {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 5px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+.team-member:hover .member-img {
+    transform: scale(1.2);
+}
+
+.team-member:hover .social {
+    opacity: 1;
+    transform: rotateY(0) scale(1, 1);
+}
+
+.team-member .social ul {
+    display: flex;
+    gap: 10px;
+}
+
+.team-member .social ul li {
+    display: flex;
+    background-color: var(--logo-color);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.team-member .social ul li:hover {
+    background-color: var(--main-color);
+    border-color: var(--logo-color);
+}
+
+.team-member .social ul li a {
+    color: var(--main-color);
+    font-size: 20px;
+    line-height: 20px;
+}
+
+
+.team-member .social ul li:hover a {
+    color: var(--logo-color);
+}
+
+.team-cap {
+    margin-bottom: 15px;
+    background-color: rgba(52, 52, 52, .8);
+}
+
+/**************** contact ****************/
+.contact-head {
+    width: fit-content;
+    margin: auto;
+    z-index: 1;
+}
+
+.contact-head::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#contact .icon {
+    background-color: #F7F7F7;
+    color: var(--head-color);
+    width: 60px;
+    font-size: 25px;
+    line-height: 25px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    transition: 0.4s;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#contact .item:hover .icon {
+    background-color: var(--logo-color);
+    color: var(--main-color);
+}
+
+.submit-btn {
+    background-color: var(--logo-color);
+    color: var(--main-color);
+    transition: 0.4s;
+    border: 1px solid transparent;
+}
+
+.submit-btn:hover {
+    background-color: var(--main-color);
+    color: var(--logo-color);
+    border-color: #000000;
+}
+
+.form-group input, textarea {
+    border: transparent;
+    background-color: #F4F4F4;
+}
+
+.form-group input:focus, textarea:focus {
+    outline: none;
+}
